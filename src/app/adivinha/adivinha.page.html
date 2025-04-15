@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pedra, Papel, Tesoura</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-label>Escolha entre pedra, papel e tesoura</ion-label>
+    <ion-select [(ngModel)]="escolhaUsuario">
+      <ion-select-option value="1">Pedra</ion-select-option>
+      <ion-select-option value="2">Papel</ion-select-option>
+      <ion-select-option value="3">Tesoura</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button expand="block" (click)="jogar()">Jogar</ion-button>
+
+  <ion-card *ngIf="resultado">
+    <ion-card-content>
+      {{ resultado }}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
